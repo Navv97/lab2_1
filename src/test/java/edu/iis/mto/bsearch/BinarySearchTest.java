@@ -18,5 +18,12 @@ public class BinarySearchTest {
         Assert.assertFalse(BinarySearch.search(2, sequence).isFound());
     }
 
+    @Test
+    public void elementFirstInSequenceTest(){
+        int[] sequence = {1,2,3,4};
+        Assert.assertEquals(1,BinarySearch.search(1,sequence).getPosition());
+    }
+
+
 
 }
