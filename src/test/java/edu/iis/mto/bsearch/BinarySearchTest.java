@@ -24,6 +24,10 @@ public class BinarySearchTest {
         Assert.assertEquals(1,BinarySearch.search(1,sequence).getPosition());
     }
 
-
+    @Test
+    public void elementLastInSequenceTest() {
+        int[] sequence = {1,2,3,4};
+        Assert.assertEquals(sequence.length, BinarySearch.search(4, sequence).getPosition());
+    }
 
 }
