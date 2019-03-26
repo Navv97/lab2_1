@@ -37,7 +37,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void testIfElementIsNotInSingleElementSequence(){
+    public void testIfElementIsNotInMultipleElementSequence(){
         int[] sequence = {1,2,3,4,5};
         Assert.assertFalse(BinarySearch.search(6, sequence).isFound());
     }
