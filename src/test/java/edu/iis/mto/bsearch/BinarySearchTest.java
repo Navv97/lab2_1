@@ -12,4 +12,11 @@ public class BinarySearchTest {
         Assert.assertTrue(BinarySearch.search(1, sequence).isFound());
     }
 
+    @Test
+    public void testIfElementIsNotInSequence(){
+        int[] sequence = {1};
+        Assert.assertFalse(BinarySearch.search(2, sequence).isFound());
+    }
+
+
 }
