@@ -42,11 +42,11 @@ public class BinarySearchTest {
         Assert.assertFalse(BinarySearch.search(6, sequence).isFound());
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testIfSequenceIsEmpty(){
         int[] sequence = {};
         Assert.assertFalse(BinarySearch.search(1, sequence).isFound());
         Assert.assertEquals(-1, BinarySearch.search(1,sequence).getPosition());
     }
-    
+
 }
