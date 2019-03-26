@@ -21,19 +21,19 @@ public class BinarySearchTest {
     @Test
     public void elementFirstInSequenceTest(){
         int[] sequence = {1,2,3,4};
-        Assert.assertEquals(1,BinarySearch.search(1,sequence).getPosition());
+        Assert.assertEquals(0,BinarySearch.search(1,sequence).getPosition());
     }
 
     @Test
     public void elementLastInSequenceTest() {
         int[] sequence = {1,2,3,4};
-        Assert.assertEquals(sequence.length, BinarySearch.search(4, sequence).getPosition());
+        Assert.assertEquals(sequence.length - 1, BinarySearch.search(4, sequence).getPosition());
     }
 
     @Test
     public void elementMiddleInSequenceTest() {
         int[] sequence = {1,2,3,4,5};
-        Assert.assertEquals((sequence.length / 2) + 1, BinarySearch.search(3, sequence).getPosition());
+        Assert.assertEquals((sequence.length / 2), BinarySearch.search(3, sequence).getPosition());
     }
 
     @Test
@@ -42,8 +42,11 @@ public class BinarySearchTest {
         Assert.assertFalse(BinarySearch.search(6, sequence).isFound());
     }
 
-
-
-
-
+    @Test
+    public void testIfSequenceIsEmpty(){
+        int[] sequence = {};
+        Assert.assertFalse(BinarySearch.search(1, sequence).isFound());
+        Assert.assertEquals(-1, BinarySearch.search(1,sequence).getPosition());
+    }
+    
 }
